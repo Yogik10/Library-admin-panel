@@ -1,0 +1,79 @@
+#buttonPanel{
+    background-color: #d8ddde;
+    border-radius: 100px;
+    display: flex;
+    height: 60px;
+    margin-right: 100px;
+    margin-left: 100px;
+    padding-top: 10px;
+}
+
+body{
+    background: url("/public/pictures/white-cubes.png");
+}
+
+#backButton{
+    margin-left: 50px;
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    font-size: 16pt;
+}
+
+#editButton{
+    margin-left: 140px;
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    font-size: 16pt;
+}
+
+#giveButton{
+    margin-left: 140px;
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    font-size: 16pt;
+}
+
+#takeButton{
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    margin-left: 140px;
+    font-size: 16pt;
+}
+
+#bookTitle{
+    margin-left: 550px;
+    margin-top: 50px;
+    width: 400px;
+    height: 400px;
+    background-color: #d8ddde;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 16pt;
+    padding-top: 25px;
+}
+
+#giveBookBack, #editBookBack{
+    background: rgba(150, 150, 150, 0.5);
+    width: 100%;
+    height: 100%;
+    display: none;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+#giveBookWindow, #editBookWindow{
+    background-color: aquamarine;
+    position: fixed;
+    height: 250px;
+    width: 250px;
+    border-radius: 40px;
+    text-align: center;
+    padding-top: 30px;
+    margin-left: 650px;
+    margin-top: 200px;
+}

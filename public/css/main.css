@@ -1,0 +1,130 @@
+#save{
+    background: url("/public/pictures/save.jpg");
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    border: 0;
+    margin-top: 5px;
+    margin-left: 400px;
+}
+
+#edit{
+    background: url("/public/pictures/edit.png");
+    background-size: cover;
+    margin-left: -30px;
+    margin-right: 20px;
+    height: 30px;
+    width: 30px;
+    border: 0;
+}
+
+#delete{
+    background: url("/public/pictures/delete.png");
+    background-size: cover;
+    margin-left: -20px;
+    margin-right: 20px;
+    height: 30px;
+    width: 30px;
+    border: 0;
+    float: right;
+}
+
+#buttonPanel{
+    background-color: #d8ddde;
+    border-radius: 100px;
+    display: flex;
+    height: 60px;
+    margin-top: -20px;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+
+body{
+    background: url("/public/pictures/white-cubes.png");
+}
+
+#libraryStr{
+    margin-top: 10px;
+    text-align: center;
+    font-style: italic;
+    font-size: 40pt;
+}
+
+#filterPannel{
+    font-size: 20pt;
+    width: 400px;
+    margin-left: 100px;
+    margin-top: 15px;
+}
+
+#filter{
+    margin-left: 10px;
+    height: 25px;
+    border-radius: 7px;
+}
+
+#newBook{
+    font-size: 15pt;
+    border-radius: 20px;
+    margin-left: 80px;
+    margin-top: 8px;
+    height: 45px;
+}
+
+
+
+#book{
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    float: left;
+    width: 400px;
+    height: 200px;
+    background-color: #d8ddde;
+    border-radius: 50px;
+    text-align: center;
+}
+
+#booksArr{
+    margin-left: 25px;
+}
+
+#bookTitle{
+    font-size: 15pt;
+}
+
+.bookbutton{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+#addBookBack, #giveBookBack, #dateFilterBack, #outWhoBack{
+    background: rgba(150, 150, 150, 0.5);
+    width: 100%;
+    height: 100%;
+    display: none;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+#addBookWindow, #giveBookWindow, #dateFilterWindow, #outWhoWindow{
+    background-color: aquamarine;
+    position: fixed;
+    height: 250px;
+    width: 250px;
+    border-radius: 40px;
+    text-align: center;
+    padding-top: 30px;
+    margin-left: 650px;
+    margin-top: 200px;
+}
+
+#lastid, #saveid, #filterUsed{
+    display: none;
+}

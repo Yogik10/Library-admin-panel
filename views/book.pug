@@ -1,0 +1,49 @@
+html
+    head
+        meta(charset="utf-8")
+        title Библиотека
+        link(rel="stylesheet", href="/public/css/book.css")
+    body
+        div#buttonPanel
+            input#backButton(type="submit", value="Назад" onclick="goBack()")
+            input#editButton(type="submit", value="Изменить" onclick="showEditingBook()")
+            input#giveButton(type="submit", value="Выдать" onclick="showGivingBook()")
+            input#takeButton(type="submit", value="Вернуть" onclick="returnBook(this)")
+        div#bookTitle
+            p Автор:&nbsp
+                =author
+            p Название:&nbsp
+                =name
+            p Дата выпуска:&nbsp
+                =date
+            P Есть в библиотеке:&nbsp
+                =have
+            p Выдана:&nbsp
+                =owner
+            p Дата возврата:&nbsp
+                =dateback
+            p Номер книги:&nbsp
+                =id
+        div#editBookBack
+            div#editBookWindow()
+                input#author(placeholder="Автор")
+                p
+                input#name(placeholder="Название")
+                p
+                p Дата выпуска:
+                input#date(type="date")
+                p
+                input(type="submit", value="Сохранить", onclick="saveEditing(this)")
+                p
+                input(type="submit", value="Отмена", onclick="closeEditingBook()")
+        div#giveBookBack
+            div#giveBookWindow
+                p
+                input#owner(placeholder="Читатель")
+                p Дата возврата:
+                input#dateback(type="date")
+                p
+                input(type="submit", value="Применить", onclick="giveBook(this)")
+                p
+                input(type="submit", value="Отмена", onclick="closeGivingBook()")
+        script(src="/public/scripts/book listener.js")

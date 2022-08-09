@@ -1,0 +1,73 @@
+html
+    head
+        meta(charset="utf-8")
+        title Библиотека
+        link(rel="stylesheet", href="/public/css/main.css")
+    body
+        p#libraryStr Библиотека
+        div#buttonPanel
+            div#filterPannel
+                h#filterStr Фильтр:
+                select#filter
+                    option(value="none") Отсутствует
+                    option(value="have") В наличии
+                    option(value="returnDate") Вернуть до
+                    option(value="out") Выданы
+                    option(value="outwho") Выданы кому
+            input#newBook(type="submit", value="Добавить книгу" onclick="showAddingBook()")
+            button#save(type="submit" onclick="save()")
+
+        ul#booksArr
+            each book in books
+                li#book
+                    div#bookTitle
+                        p
+                            =book.author
+                        p
+                            =book.name
+                        p#id Номер книги:&nbsp
+                            =book.id
+                    button#edit(type="submit", onclick="bookEdit(this)")
+                    input.bookbutton(type="submit", value="Выдать", onclick="showGivingBook(this)")
+                    input.bookbutton(type="submit", value="Вернуть", onclick="returnBook(this)")
+                    button#delete(type="submit", onclick="deleteBookEvent(this)")
+        p#lastid()
+            =count + 1
+        div#addBookBack
+            div#addBookWindow()
+                input#authorI(placeholder="Автор")
+                p
+                input#nameI(placeholder="Название")
+                p Дата выпуска:
+                input#dateI(type="date")
+                p
+                input(type="submit", value="Добавить", onclick="addBook()")
+                p
+                input(type="submit", value="Отмена", onclick="closeAddingBook()")
+        div#giveBookBack
+            div#giveBookWindow()
+                p#saveid
+                input#owner(placeholder="Читатель")
+                p Дата возврата:
+                input#dateback(type="date")
+                p
+                input(type="submit", value="Выдать", onclick="giveBook()")
+                p
+                input(type="submit", value="Отмена", onclick="closeGivingBook()")
+        div#dateFilterBack
+            div#dateFilterWindow
+                input#dateFilter(type="date")
+                p
+                input(type="submit", value="Применить", onclick="filterDate()")
+                p
+                input(type="submit", value="Отмена", onclick="closeDateFiltering()")
+        div#outWhoBack
+            div#outWhoWindow
+                input#whoName(placeholder="Имя, кому выдано")
+                p
+                input(type="submit", value="Применить", onclick="filterWho()")
+                p
+                input(type="submit", value="Отмена", onclick="closeWhoFiltering()")
+        p#filterUsed
+            =filter
+    script(src="/public/scripts/listener.js")
